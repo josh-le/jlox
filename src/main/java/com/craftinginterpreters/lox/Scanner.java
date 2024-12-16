@@ -152,7 +152,7 @@ class Scanner {
         }
 
         if (isAtEnd()) {
-            Lox.error(line, "Unterminated String");
+            Lox.error(line, "Unterminated string");
             return;
         }
 
