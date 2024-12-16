@@ -25,7 +25,7 @@ public class Lox {
     // run a file
     private static void run(String source) {
         Scanner scanner = new Scanner(source);
-        List<Token> tokens = scanner.scanToken();
+        List<Token> tokens = scanner.scanTokens();
 
         // print the tokens for now
         for (Token token : tokens) {
