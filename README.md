@@ -12,7 +12,9 @@ building:
 
 topics covered:
 - formal grammar
-- visitor design pattern 
+- design patterns:
+    - visitor
+    - sentinel classes
 
 # resources
 following the book <a href="https://craftinginterpreters.com/">Crafting Interpreters by Robert Nystrom</a>
