@@ -3,9 +3,11 @@ Work In Progress
 
 interpreter for the Lox language written in Java
 
+# material covered
 built:
 - scanner
 - script for generating AST classes
+- (not so) pretty printer for AST
 
 building:
 - parser
