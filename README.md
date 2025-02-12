@@ -3,4 +3,16 @@ Work In Progress
 
 interpreter for the Lox language written in Java
 
-from the book <a href="https://craftinginterpreters.com/">Crafting Interpreters by Robert Nystrom</a>
+built:
+- scanner
+- script for generating AST classes
+
+building:
+- parser
+
+topics covered:
+- formal grammar
+- visitor design pattern 
+
+# resources
+following the book <a href="https://craftinginterpreters.com/">Crafting Interpreters by Robert Nystrom</a>
