@@ -8,9 +8,11 @@ built:
 - scanner
 - script for generating AST classes
 - (not so) pretty printer for AST
+- parser
 
 building:
-- parser
+- interpreter
+    - evaluating our first expressions
 
 topics covered:
 - formal grammar
