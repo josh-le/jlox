@@ -10,6 +10,7 @@ import java.util.List;
 
 public class Lox {
     // track errors
+    private static final Interpreter interpreter = new Interpreter();
     static boolean hadError = false;
     static boolean hadRuntimeError = false;
 
@@ -33,7 +34,7 @@ public class Lox {
 
         if (hadError) return;
 
-        System.out.println(new AstPrinter().print(expression));
+        interpreter.interpret(expression);
     }
     // read file and call run on it
     private static void runFile(String path) throws IOException {
