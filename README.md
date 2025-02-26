@@ -2,7 +2,18 @@
 Work In Progress
 
 interpreter for the Lox language written in Java
-
+# running the interpreter
+```bash
+git clone https://github.com/josh-leblanc/jlox
+cd jlox
+make
+# example:
+> print 2 + 3;
+5
+> print "a" + "b"
+ab
+```
+this will run a lox REPL, support for running files is coming soon
 # material covered
 __built:__
 - scanner
