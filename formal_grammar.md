@@ -1,10 +1,14 @@
 # formal grammar
 definition of the formal grammar of the lox programming language, updated as we go along
 
-> program -> statement* EOF ;
+> program -> declaration* EOF ;
+>
+> declaration -> varDecl | statement;
 >
 > statement -> exprStmt | printStmt ;
 > 
+> varDecl -> "var" IDENTIFIER ( "=" expression )? ";";
+>
 > exprStmt -> expression ";" ;
 > printStmt -> "print" expression ";" ;
 >
@@ -14,5 +18,5 @@ definition of the formal grammar of the lox programming language, updated as we 
 > term -> factor ( ( "-" | "+" ) factor )* ;
 > factor -> unary ( ( "\" | "\*" ) unary )\* ; // (IGNORE \'s) ;
 > unary -> ( "!" | "-" ) unary | primary ;
-> primary -> NUMBER | STRING | "true" | "false" | "nil" | "(" expression ")" ;
+> primary -> NUMBER | STRING | "true" | "false" | "nil" | "(" expression ")" | IDENTIFIER ;
 
