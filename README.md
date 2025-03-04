@@ -26,6 +26,10 @@ __built:__
 __building:__
 - interpreter
     - statements
+        - print statement
+        - expression statement
+    - declarations
+        - global variable declaration
 
 __topics covered:__
 - formal grammar

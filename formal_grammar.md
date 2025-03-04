@@ -3,7 +3,7 @@ definition of the formal grammar of the lox programming language, updated as we 
 
 > program -> declaration* EOF ;
 >
-> declaration -> varDecl | statement;
+> declaration -> varDecl | statement ;
 >
 > statement -> exprStmt | printStmt ;
 > 
