@@ -22,14 +22,16 @@ __built:__
 - parser
 - interpreter
     - evaluating expressions
-
-__building:__
-- interpreter
     - statements
         - print statement
         - expression statement
+        - variable assignment
     - declarations
         - global variable declaration
+
+__building:__
+- interpreter
+    - scope
 
 __topics covered:__
 - formal grammar
