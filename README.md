@@ -28,10 +28,9 @@ __built:__
         - variable assignment
     - declarations
         - global variable declaration
+    - scope
 
 __building:__
-- interpreter
-    - scope
 
 __topics covered:__
 - formal grammar
