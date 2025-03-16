@@ -1,8 +1,4 @@
-var a = 1;
-var b = 1;
-
-if (a != b) {
-    print "true";
-} else {
-    print "false";
-}
+print nil or "hello";
+print "yes" or "no";
+print false and "ok";
+print true and "blah";
