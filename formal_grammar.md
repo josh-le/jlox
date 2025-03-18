@@ -5,7 +5,9 @@ definition of the formal grammar of the lox programming language, updated as we 
 >
 > declaration -> varDecl | statement ;
 >
-> statement -> exprStmt | printStmt | block | ifStmt ;
+> statement -> exprStmt | printStmt | block | ifStmt | whileStmt ;
+>
+> whileStmt -> "while" "(" expression ")" statement ;
 >
 > ifStmt -> "if" "(" expression ")" statement ( "else" statement )? ;
 >

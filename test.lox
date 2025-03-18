@@ -1,4 +1,6 @@
-print nil or "hello";
-print "yes" or "no";
-print false and "ok";
-print true and "blah";
+var i = 0;
+
+while (i < 10) {
+    print i;
+    i = i + 1;
+}
