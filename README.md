@@ -30,9 +30,12 @@ __built:__
         - global variable declaration
     - scope
 - flow control
-    - conditional flow control
+    - if statement
+    - while loop
+    - for loop
 
 __building:__
+
 
 __topics covered:__
 - formal grammar
@@ -41,6 +44,36 @@ __topics covered:__
     - sentinel classes
 - associativity and precedence
 - recursive descent
-
+# formal grammar
+definition of the formal grammar of the lox programming language, updated as we go along
+> program -> declaration* EOF ;
+>
+> declaration -> varDecl | statement ;
+>
+> statement -> exprStmt | printStmt | block | ifStmt | whileStmt | forStmt ;
+>
+> forStmt -> "for" "(" ( varDecl | exprStmt | ";" ) expression? ";" expression? ")" statement ;
+>
+> whileStmt -> "while" "(" expression ")" statement ;
+>
+> ifStmt -> "if" "(" expression ")" statement ( "else" statement )? ;
+>
+> block -> "{" declaration* "}" ;
+> 
+> varDecl -> "var" IDENTIFIER ( "=" expression )? ";";
+>
+> exprStmt -> expression ";" ;
+> printStmt -> "print" expression ";" ;
+>
+> expression -> assignment ;
+> assignment -> IDENTIFIER "=" assignment | logic_or ;
+> logic_or -> logic_and ( "or" logic_and )* ;
+> logic_and -> equality ( "and" equality )* ;
+> equality -> comparison ( ( "!=" | "==" ) comparison )* ;
+> comparison -> term ( ( ">" | ">=" | "<" | "<=" ) term )* ;
+> term -> factor ( ( "-" | "+" ) factor )* ;
+> factor -> unary ( ( "\" | "\*" ) unary )\* ; // (IGNORE \'s) ;
+> unary -> ( "!" | "-" ) unary | primary ;
+> primary -> NUMBER | STRING | "true" | "false" | "nil" | "(" expression ")" | IDENTIFIER ;
 # resources
 following the book <a href="https://craftinginterpreters.com/">Crafting Interpreters by Robert Nystrom</a>
