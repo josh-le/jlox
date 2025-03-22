@@ -35,6 +35,7 @@ __built:__
     - for loop
 
 __building:__
+- functions
 
 
 __topics covered:__
@@ -73,7 +74,9 @@ definition of the formal grammar of the lox programming language, updated as we 
 > comparison -> term ( ( ">" | ">=" | "<" | "<=" ) term )* ;
 > term -> factor ( ( "-" | "+" ) factor )* ;
 > factor -> unary ( ( "\" | "\*" ) unary )\* ; // (IGNORE \'s) ;
-> unary -> ( "!" | "-" ) unary | primary ;
+> unary -> ( "!" | "-" ) unary | call ;
+> call -> primary ( "(" arguments? ")" )* ;
+> arguments -> expression ( "," expression )* ;
 > primary -> NUMBER | STRING | "true" | "false" | "nil" | "(" expression ")" | IDENTIFIER ;
 # resources
 following the book <a href="https://craftinginterpreters.com/">Crafting Interpreters by Robert Nystrom</a>
