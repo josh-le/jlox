@@ -1,8 +1,7 @@
-var a = 0;
-var temp;
+var start = clock();
 
-for (var b = 1; a < 200; b = temp + b) {
-    print a;
-    temp = a;
-    a = b;
-}
+for (var i = 0; i < 100000; i = i + 1) { }
+
+var end = clock();
+
+print end - start;

@@ -669,3 +669,20 @@ __arity__ is the number of arguments a function or operator expects.
 
 we are going to throw a runtime error if there are too many or too few arguments provided
 ## 10.2 native functions
+
+we are going to throw a runtime error if there are too many or too few arguments provided
+## 10.2 native functions
+__native functions__, aka primitives, eternal functions, foreign functions are implemented in the _host_ language
+
+many languages have a __foreign function interface__ (FFI) that allows the user to implement functions in the host language themselves.
+### 10.2.1 telling time
+many languages have `print` as a native function, however we already implemented that.
+
+instead, to benchmark things, we are going to create a `clock` function that will give the elapsed time by taking the difference of two calls
+
+we created a global scope where the function will live
+
+and the function is defined in the constructor of the interpreter class.
+
+Lox is considered a Lisp-1 language because it stores variables and functions in the same namespace, Lisp-2 languages have seperate namespaces for each.
+## 10.3 function declarations
