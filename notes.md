@@ -686,3 +686,7 @@ and the function is defined in the constructor of the interpreter class.
 
 Lox is considered a Lisp-1 language because it stores variables and functions in the same namespace, Lisp-2 languages have seperate namespaces for each.
 ## 10.3 function declarations
+new grammar rules for funDecl, function and parameters
+
+implemented those rules in the parser
+## 10.4 function objects

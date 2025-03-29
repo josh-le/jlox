@@ -49,7 +49,7 @@ __topics covered:__
 definition of the formal grammar of the lox programming language, updated as we go along
 > program -> declaration* EOF ;
 >
-> declaration -> varDecl | statement ;
+> declaration -> funDecl | varDecl | statement ;
 >
 > statement -> exprStmt | printStmt | block | ifStmt | whileStmt | forStmt ;
 >
@@ -60,6 +60,12 @@ definition of the formal grammar of the lox programming language, updated as we 
 > ifStmt -> "if" "(" expression ")" statement ( "else" statement )? ;
 >
 > block -> "{" declaration* "}" ;
+>
+> funDecl -> "fun" function ;
+>
+> function -> IDENTIFIER "(" parameters? ")" block;
+>
+> parameters -> IDENTIFIER ( "," IDENTIFIER )* ;
 > 
 > varDecl -> "var" IDENTIFIER ( "=" expression )? ";";
 >
