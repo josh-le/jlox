@@ -1,7 +1,6 @@
-var start = clock();
+fun count(n) {
+    if (n > 1) count(n - 1);
+    print n;
+}
 
-for (var i = 0; i < 100000; i = i + 1) { }
-
-var end = clock();
-
-print end - start;
+count(5);

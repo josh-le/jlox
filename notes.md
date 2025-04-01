@@ -690,3 +690,11 @@ new grammar rules for funDecl, function and parameters
 
 implemented those rules in the parser
 ## 10.4 function objects
+creating a new class to hold functions that implements LoxCallable
+
+important not that we are creating a new environment at each call, which for example enables recursion to work
+
+thne we can go into the interpreter and implement the visitFunctionStmt methods which takes the function statement syntax node and turns it into the runtime LoxFunction and binds it to a variable
+
+"I don’t know about you, but that looks like an honest-to-God programming language to me." - this makes me very happy, i love this book
+
