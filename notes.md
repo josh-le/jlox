@@ -697,4 +697,12 @@ important not that we are creating a new environment at each call, which for exa
 thne we can go into the interpreter and implement the visitFunctionStmt methods which takes the function statement syntax node and turns it into the runtime LoxFunction and binds it to a variable
 
 "I don’t know about you, but that looks like an honest-to-God programming language to me." - this makes me very happy, i love this book
+## 10.5 return statements
+return statement. functions always technically have to return something in lox, it is nil by default
+### 10.5.1 returning from calls
+when you return you have to jump out of a bunch of calls, the way we will do that is with an exception
 
+not very good way to do it, but here we evaluate our syntax tree by getting super deep recursively into the java call stack, and exceptions are a good way to escape that.
+
+the exception is caught in the block execution part of the LoxCallable class.
+## 10.6 local functions and closures

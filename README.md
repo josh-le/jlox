@@ -51,26 +51,20 @@ definition of the formal grammar of the lox programming language, updated as we 
 >
 > declaration -> funDecl | varDecl | statement ;
 >
-> statement -> exprStmt | printStmt | block | ifStmt | whileStmt | forStmt ;
->
-> forStmt -> "for" "(" ( varDecl | exprStmt | ";" ) expression? ";" expression? ")" statement ;
->
-> whileStmt -> "while" "(" expression ")" statement ;
->
-> ifStmt -> "if" "(" expression ")" statement ( "else" statement )? ;
->
-> block -> "{" declaration* "}" ;
->
 > funDecl -> "fun" function ;
->
 > function -> IDENTIFIER "(" parameters? ")" block;
->
-> parameters -> IDENTIFIER ( "," IDENTIFIER )* ;
-> 
 > varDecl -> "var" IDENTIFIER ( "=" expression )? ";";
+> parameters -> IDENTIFIER ( "," IDENTIFIER )* ;
+>
+> statement -> exprStmt | printStmt | block | ifStmt | returnStmt | whileStmt | forStmt ;
 >
 > exprStmt -> expression ";" ;
 > printStmt -> "print" expression ";" ;
+> block -> "{" declaration* "}" ;
+> ifStmt -> "if" "(" expression ")" statement ( "else" statement )? ;
+> returnStmt -> "return" expression? ";" ;
+> whileStmt -> "while" "(" expression ")" statement ;
+> forStmt -> "for" "(" ( varDecl | exprStmt | ";" ) expression? ";" expression? ")" statement ;
 >
 > expression -> assignment ;
 > assignment -> IDENTIFIER "=" assignment | logic_or ;
