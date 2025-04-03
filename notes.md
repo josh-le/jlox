@@ -706,3 +706,13 @@ not very good way to do it, but here we evaluate our syntax tree by getting supe
 
 the exception is caught in the block execution part of the LoxCallable class.
 ## 10.6 local functions and closures
+when we define a function, we save the environment at that time in a new environment stored in the function called __closure__.
+
+when we run the function, we set the environment to be the closure stored on that function
+## challenges
+1. __smalltalk__ implementations don't have the performance cost of checking the number of params and args are equal at function call time, idek what those are
+2. THIS ONE IS FUN: implement __anonymous (lambda) functions__.
+    How do you handle the tricky case of an anonymous function expression occurring in an expression statement:
+    `fun () {};`
+3. talking about how parameters are stored in the environment on function call, and redefining them in the body of the function. i believe it behaves how ti should right now.
+# 11. resolving and binding
