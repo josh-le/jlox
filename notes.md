@@ -716,3 +716,11 @@ when we run the function, we set the environment to be the closure stored on tha
     `fun () {};`
 3. talking about how parameters are stored in the environment on function call, and redefining them in the body of the function. i believe it behaves how ti should right now.
 # 11. resolving and binding
+we created a hole in our scoping logic when we added closures. this chapter is about patching that hole. we will also learn about _semantic analysis_
+## 11.1 static scope
+clear scope definition:
+    a variable usage refers to the preceding declaration with the same name in the innermost scope that encloses the expression where the variable is used
+
+what the fuck. in javascript if you use `var` it hoists the declaration to the top of the scope and just assigns the variables at the location var is used?? what purpose would this server OTHER than creating bugs??
+
+

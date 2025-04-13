@@ -12,7 +12,6 @@ class LoxFunction implements LoxCallable {
 
     @Override
     public Object call(Interpreter interpreter, List<Object> arguments) {
-	// defining functions in other functions will not include their scope. we want that?
 	Environment environment = new Environment(closure);
 	for (int i = 0; i < declaration.params.size(); i++) {
 	    environment.define(declaration.params.get(i).lexeme, arguments.get(i));
