@@ -2,7 +2,7 @@
 id: Crafting Interpreters - Robert Nystrom
 aliases: []
 tags:
-  - book
+  - books
   - in-progress
 ---
 [[Build Your Own Interpreter - Code Crafters]] we're reading the book instead
@@ -722,5 +722,13 @@ clear scope definition:
     a variable usage refers to the preceding declaration with the same name in the innermost scope that encloses the expression where the variable is used
 
 what the fuck. in javascript if you use `var` it hoists the declaration to the top of the scope and just assigns the variables at the location var is used?? what purpose would this server OTHER than creating bugs??
+### 11.1.1 scopes and mutable environments
+__alright:__
+the problem is that when we create the function, it's closure is a reference to it's current environment. so, when we add new variables to the current environment, they are also added to the closure even though they shouldn't be
+### 11.1.2 persistent environments
+__persistent data structures__ are a type of data structure that is never modified, but when a modification is made a new structure is created with a copy of the original and the modifications made (in practice, so it doesn't use tons of memory, the structures "share" data)
 
+so the correct way to do this would be to have our environment be a persistent data structure, and the closure be a reference to the environment at the time of the definition of the function. the reference would change whenever the environment would change because a new data structure would be created.
+    _we're not gonna do that tho_
+## 11.2 semantic analysis
 
