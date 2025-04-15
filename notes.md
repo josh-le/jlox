@@ -731,4 +731,10 @@ __persistent data structures__ are a type of data structure that is never modifi
 so the correct way to do this would be to have our environment be a persistent data structure, and the closure be a reference to the environment at the time of the definition of the function. the reference would change whenever the environment would change because a new data structure would be created.
     _we're not gonna do that tho_
 ## 11.2 semantic analysis
+we're going to resolve variables early by counting how many hops through environments we have to do to resolve the variable
 
+if it is the same amount, we know the variable we are looking for is the same one in the same environment
+### 11.2.1 a variable resolution pass
+after the parser produces a syntax tree, and before the interpreter start executing, we will do a single pass over the tree to resolve all the variables
+    passes over the tree between parsing and execution are common
+## 11.3 a resolver class
