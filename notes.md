@@ -738,3 +738,14 @@ if it is the same amount, we know the variable we are looking for is the same on
 after the parser produces a syntax tree, and before the interpreter start executing, we will do a single pass over the tree to resolve all the variables
     passes over the tree between parsing and execution are common
 ## 11.3 a resolver class
+the class implements the visitor abstractions because we have to implement all of the nodes, however only a few kinds of nodes will actually have to do something:
+    - block statement
+    - function declaration
+    - variable declaration
+    - variable expressions
+    - assignment expressions
+### 11.3.1 resolving blocks
+we are only resolving variables in local scopes
+
+each local scope creates a new scope on the scope stack, which is just a map whose keys are strings that represent the identifiers of the objects in scope
+### 11.3.2 resolving variable declarations
