@@ -749,3 +749,4 @@ we are only resolving variables in local scopes
 
 each local scope creates a new scope on the scope stack, which is just a map whose keys are strings that represent the identifiers of the objects in scope
 ### 11.3.2 resolving variable declarations
+
