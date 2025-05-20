@@ -37,6 +37,16 @@ class Resolver implements Expr.Visitor<Void>, Stmt.Visitor<Void> {
         return null;
     }
 
+    @Override
+    public Void visitVariableExpr(Expr.Variable expr) {
+        if (!scopes.isEmpty() && scopes.peek().get(expr.name.lexeme) == Boolean.FALSE) {
+            Lox.error(expr.name, "Can't read local variable in it's own initializer.");
+        }
+
+        resolveLocal(expr, expr.name);
+        return null;
+    }
+
     private void resolve(Stmt stmt) {
         stmt.accept(this);
     }
@@ -55,7 +65,7 @@ class Resolver implements Expr.Visitor<Void>, Stmt.Visitor<Void> {
 
     private void declare(Token name) {
         if (scopes.isEmpty()) return;
-        
+
         Map<String, Boolean> scope = scopes.peek();
         scope.put(name.lexeme, false);
     }
@@ -63,5 +73,14 @@ class Resolver implements Expr.Visitor<Void>, Stmt.Visitor<Void> {
     private void define(Token name) {
         if (scopes.isEmpty()) return;
         scopes.peek().put(name.lexeme, true);
+    }
+
+    private void resolveLocal(Expr expr, Token name) {
+        for (int i = scopes.size() - 1; i >= 0; i--) {
+            if (scopes.get(i).containsKey(name.lexeme)) {
+                interpreter.resolve(expr, scopes.size() - 1 - i);
+                return;
+            }
+        }
     }
 }
