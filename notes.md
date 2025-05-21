@@ -750,4 +750,7 @@ we are only resolving variables in local scopes
 each local scope creates a new scope on the scope stack, which is just a map whose keys are strings that represent the identifiers of the objects in scope
 ### 11.3.2 resolving variable declarations
 we declare the variable in the scope, and if the initializer is present we resolve it then bind define the variables by binding it
-### 11.3.3
+### 11.3.3 resolving variables expressions
+the variable is resolved and binded with a number representing the amount of nested scopes to get to that variable
+### 11.3.4 resolving assignment expressions
+the last one to resolve is the assignment expression
