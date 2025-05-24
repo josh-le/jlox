@@ -754,3 +754,6 @@ we declare the variable in the scope, and if the initializer is present we resol
 the variable is resolved and binded with a number representing the amount of nested scopes to get to that variable
 ### 11.3.4 resolving assignment expressions
 the last one to resolve is the assignment expression
+### 11.3.5 resolving function declarations
+declare and define the function name, then we have a helper function to resolve the function, which opens a new scope and defines all the contents in the new scope
+### 11.3.6
