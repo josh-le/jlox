@@ -756,4 +756,6 @@ the variable is resolved and binded with a number representing the amount of nes
 the last one to resolve is the assignment expression
 ### 11.3.5 resolving function declarations
 declare and define the function name, then we have a helper function to resolve the function, which opens a new scope and defines all the contents in the new scope
-### 11.3.6
+### 11.3.6 resolving the other syntax tree nodes
+just going through and resolving all the other visit methods.
+## 11.4 interpreting resolved variables

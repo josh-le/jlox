@@ -1,10 +1,9 @@
 var a = 1;
-print a;
 
-fun hello(a) {
-    var a = 2;
-    print a;
+if (a == 1) {
+    print("hello");
+else if (a == 2) {
+    print("world");
+} else {
+    print("bye");
 }
-
-hello(a);
-print a;
