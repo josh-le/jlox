@@ -721,7 +721,7 @@ we created a hole in our scoping logic when we added closures. this chapter is a
 clear scope definition:
     a variable usage refers to the preceding declaration with the same name in the innermost scope that encloses the expression where the variable is used
 
-what the fuck. in javascript if you use `var` it hoists the declaration to the top of the scope and just assigns the variables at the location var is used?? what purpose would this server OTHER than creating bugs??
+what the fuck: in javascript if you use `var` it hoists the declaration to the top of the scope and just assigns the variables at the location var is used?? what purpose would this serve OTHER than creating bugs??
 ### 11.1.1 scopes and mutable environments
 __alright:__
 the problem is that when we create the function, it's closure is a reference to it's current environment. so, when we add new variables to the current environment, they are also added to the closure even though they shouldn't be
@@ -756,6 +756,9 @@ the variable is resolved and binded with a number representing the amount of nes
 the last one to resolve is the assignment expression
 ### 11.3.5 resolving function declarations
 declare and define the function name, then we have a helper function to resolve the function, which opens a new scope and defines all the contents in the new scope
-### 11.3.6 resolving the other syntax tree nodes
+### 11.3.6 resolving the other syntax tree node 
 just going through and resolving all the other visit methods.
 ## 11.4 interpreting resolved variables
+our resolver tells the interpreter how many scopes away the variable declaration is from the usage of the variable
+
+some compilers store the resolved information in the syntax tree. we are going to store it in a map that maps the tree nodes to its resolved data.
