@@ -764,5 +764,6 @@ our resolver tells the interpreter how many scopes away the variable declaration
 some compilers store the resolved information in the syntax tree. we are going to store it in a map that maps the tree nodes to its resolved data.
 ## 11.4.1 accessing a resolved variable
 the interpreter now accesses variables by throwing to the environment to jump the distance in parent directories that was resolved by the resolver.
+## 11.4.2 assigning to a resolved variable
 
 
