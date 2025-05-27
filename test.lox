@@ -1,9 +1,10 @@
 var a = 1;
 
-if (a == 1) {
-    print("hello");
-} else if (a == 2) {
-    print("world");
-} else {
-    print("bye");
+return;
+
+fun hello() {
+    var a = a;
+    print(a);
 }
+
+hello();

@@ -768,3 +768,16 @@ the interpreter now accesses variables by throwing to the environment to jump th
 basically what we just did but in reverse for assigning the variables
 ## 11.4.3 running the resolve
 in the `run` method of the Lox class we just create a Resolver by passing in the interpreter then `resolve()` before we run the interpreter.
+## 11.5 resolution errors
+error on declaration if there is already another variable with this name in local scope
+## 11.5.1 invalid return errors
+error on return if we are not in a function, which is kept track of in the resolver
+
+also, if we find an error in the resolver we exit and don't run the interpreter.
+
+there is a lot of other analysis that we could do here! think about it.
+## challenges
+1. i think it's so that we can use the function recursively
+2. not sure, i guess it should be an error?
+3. extend resolver to report if a local variable is unused - DO IT!!!
+4. extend resolver to look variables up by index stored with them in an array rather than in a map
