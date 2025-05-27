@@ -765,5 +765,6 @@ some compilers store the resolved information in the syntax tree. we are going t
 ## 11.4.1 accessing a resolved variable
 the interpreter now accesses variables by throwing to the environment to jump the distance in parent directories that was resolved by the resolver.
 ## 11.4.2 assigning to a resolved variable
-
-
+basically what we just did but in reverse for assigning the variables
+## 11.4.3 running the resolve
+in the `run` method of the Lox class we just create a Resolver by passing in the interpreter then `resolve()` before we run the interpreter.
