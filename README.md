@@ -1,12 +1,12 @@
 # jlox
 a tree-walk interpreter for the Lox language written in Java
-# table of contents
+## table of contents
 - [running the interpreter](#running-the-interpreter)
 - [material covered](material-covered)
 - [formal grammar](formal-grammar)
 - [todo](todo)
 - [resources](resources)
-# running the interpreter
+## running the interpreter
 first, ensure you have java installed
 ```bash
 git clone https://github.com/josh-leblanc/jlox
@@ -26,7 +26,7 @@ ab
 make test # compiles the interpreter and runs the file test.lox
 ```
 this will run a lox REPL, support for running files is coming soon
-# material covered
+## material covered
 __built:__
 - scanner
 - script for generating AST classes
@@ -66,7 +66,7 @@ __topics covered:__
 - control flow
 - scopes, environments and closures
 - semantic analysis
-# formal grammar
+## formal grammar
 definition of the formal grammar of the lox programming language, updated as we go along
 > program -> declaration* EOF ;
 >
@@ -99,9 +99,9 @@ definition of the formal grammar of the lox programming language, updated as we 
 > call -> primary ( "(" arguments? ")" )* ;
 > arguments -> expression ( "," expression )* ;
 > primary -> NUMBER | STRING | "true" | "false" | "nil" | "(" expression ")" | IDENTIFIER ;
-# todo
+## todo
 main functionality of the interpreter is finished, but there are still things that can be added:
 - ch 12 and 13 to implement classes
 - challenges for pretty much all the chapters
-# resources
+## resources
 following the book <a href="https://craftinginterpreters.com/">Crafting Interpreters by Robert Nystrom</a>
