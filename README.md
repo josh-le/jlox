@@ -72,32 +72,32 @@ definition of the formal grammar of the lox programming language, updated as we 
 >
 > declaration -> funDecl | varDecl | statement ;
 >
-> funDecl -> "fun" function ;
-> function -> IDENTIFIER "(" parameters? ")" block;
-> varDecl -> "var" IDENTIFIER ( "=" expression )? ";";
-> parameters -> IDENTIFIER ( "," IDENTIFIER )* ;
+> funDecl -> "fun" function ; <br>
+> function -> IDENTIFIER "(" parameters? ")" block ; <br>
+> varDecl -> "var" IDENTIFIER ( "=" expression )? ";" ; <br>
+> parameters -> IDENTIFIER ( "," IDENTIFIER )* ; <br>
 >
 > statement -> exprStmt | printStmt | block | ifStmt | returnStmt | whileStmt | forStmt ;
 >
-> exprStmt -> expression ";" ;
-> printStmt -> "print" expression ";" ;
-> block -> "{" declaration* "}" ;
-> ifStmt -> "if" "(" expression ")" statement ( "else" statement )? ;
-> returnStmt -> "return" expression? ";" ;
-> whileStmt -> "while" "(" expression ")" statement ;
+> exprStmt -> expression ";" ; <br>
+> printStmt -> "print" expression ";" ; <br>
+> block -> "{" declaration* "}" ; <br>
+> ifStmt -> "if" "(" expression ")" statement ( "else" statement )? ; <br>
+> returnStmt -> "return" expression? ";" ; <br>
+> whileStmt -> "while" "(" expression ")" statement ; <br>
 > forStmt -> "for" "(" ( varDecl | exprStmt | ";" ) expression? ";" expression? ")" statement ;
 >
-> expression -> assignment ;
-> assignment -> IDENTIFIER "=" assignment | logic_or ;
-> logic_or -> logic_and ( "or" logic_and )* ;
-> logic_and -> equality ( "and" equality )* ;
-> equality -> comparison ( ( "!=" | "==" ) comparison )* ;
-> comparison -> term ( ( ">" | ">=" | "<" | "<=" ) term )* ;
-> term -> factor ( ( "-" | "+" ) factor )* ;
-> factor -> unary ( ( "\" | "\*" ) unary )\* ; // (IGNORE \'s) ;
-> unary -> ( "!" | "-" ) unary | call ;
-> call -> primary ( "(" arguments? ")" )* ;
-> arguments -> expression ( "," expression )* ;
+> expression -> assignment ; <br>
+> assignment -> IDENTIFIER "=" assignment | logic_or ; <br>
+> logic_or -> logic_and ( "or" logic_and )* ; <br>
+> logic_and -> equality ( "and" equality )* ; <br>
+> equality -> comparison ( ( "!=" | "==" ) comparison )* ; <br>
+> comparison -> term ( ( ">" | ">=" | "<" | "<=" ) term )* ; <br>
+> term -> factor ( ( "-" | "+" ) factor )* ; <br>
+> factor -> unary ( ( "\" | "\*" ) unary )\* ; // (IGNORE \'s) ; <br>
+> unary -> ( "!" | "-" ) unary | call ; <br>
+> call -> primary ( "(" arguments? ")" )* ; <br>
+> arguments -> expression ( "," expression )* ; <br>
 > primary -> NUMBER | STRING | "true" | "false" | "nil" | "(" expression ")" | IDENTIFIER ;
 ## todo
 main functionality of the interpreter is finished, but there are still things that can be added:
