@@ -2,10 +2,10 @@
 a tree-walk interpreter for the Lox language written in Java
 ## table of contents
 - [running the interpreter](#running-the-interpreter)
-- [material covered](material-covered)
-- [formal grammar](formal-grammar)
-- [todo](todo)
-- [resources](resources)
+- [material covered](#material-covered)
+- [formal grammar](#formal-grammar)
+- [todo](#todo)
+- [resources](#resources)
 ## running the interpreter
 first, ensure you have java installed
 ```bash
